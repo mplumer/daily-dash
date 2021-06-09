@@ -1,8 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 import backgroundImageReducer from "../features/backgroundImage/backgroundImageSlice";
+//import journalReducer from "../features/journal/journalSlice";
+//import quoteReducer from "../features/quote/quoteSlice";
+import weatherReducer from "../features/weather/weatherSlice";
+//import errorReducer from "../features/error/errorSlice";
 
-export const store = configureStore({
+export default configureStore({
   reducer: {
-    BackgroundImage: backgroundImageReducer,
-  },
+    backgroundImage: backgroundImageReducer,
+    weather: weatherReducer,
+  }
 });

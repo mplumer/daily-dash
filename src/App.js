@@ -1,18 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import BackgroundImage from "./features/backgroundImage/BackgroundImage";
+import Weather from "./features/weather/Weather";
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <BackgroundImage>
+      <BackgroundImage/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+       <Weather/> 
       <h1>Daily Dash on the way!</h1>
       </header>
-      </BackgroundImage>
     </div>
   );
 }
