@@ -12,7 +12,7 @@ export const weatherSlice = createSlice({
     city: "Tampa",
     state: "Florida",
     metadata: {},
-    temperature: ""
+    temp: ""
   },
   reducers: {
     setCity: (state, action) => {
@@ -25,7 +25,7 @@ export const weatherSlice = createSlice({
   extraReducers: {
     [getWeather.fulfilled]: (state, action) => {
       state.metadata = action.payload.weatherMetadata;
-      state.temperature = action.payload.temperature;
+      state.temp = action.payload.temp;
     }
   }
 });
