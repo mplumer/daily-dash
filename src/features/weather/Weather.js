@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getWeather } from "./weatherSlice";
 
 const Weather = () => {
-  const { metadata, temp, city, state } = useSelector(
+  const { metadata, temperature, city, state } = useSelector(
     (state) => state.weather
   );
   const dispatch = useDispatch();
@@ -16,12 +16,13 @@ const Weather = () => {
     <div className="weather">
       <div className="temperature-container">
         <img
-          src={`https://openweathermap.org/img/w/${metadata.icon}`}
+          src={`http://openweathermap.org/img/wn/${metadata.icon}@2x.png`}
           alt=""
         />
         <div className="weather-text">
-          <p className="temperature">{temp}°</p>
+          <p className="temperature">{temperature}°</p>
           <p className="weather-description">{metadata.description}</p>
+          <p className="weather-city-state">{city}, {state}</p>
         </div>
       </div>
     </div>
